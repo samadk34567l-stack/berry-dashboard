@@ -1,12 +1,8 @@
 import React from 'react'
-import { AppBar, Toolbar, IconButton, Box, Paper, InputBase } from '@mui/material'
+import { AppBar, Toolbar, IconButton, Box, Avatar, Paper, InputBase } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 import TuneIcon from '@mui/icons-material/Tune'
-import GraphicEqIcon from '@mui/icons-material/GraphicEq'
-import TranslateIcon from '@mui/icons-material/Translate'
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
-import FullscreenIcon from '@mui/icons-material/Fullscreen'
 import { drawerWidth } from './Sidebar.jsx'
 
 const darken = (hex, amt = 0.18) => {
@@ -103,19 +99,19 @@ export default function Navbar({ onMenuClick, onToggleSidebar, desktopOpen }) {
 
         <Box sx={{ flexGrow: 1 }} />
 
-        <Box sx={{ display: { xs: 'none', lg: 'flex' }, alignItems: 'center', gap: 1 }}>
-          <IconButton sx={iconBtnSx('#ede7f6', '#5e35b1')}>
-            <GraphicEqIcon sx={{ fontSize: 19 }} />
-          </IconButton>
-          <IconButton sx={iconBtnSx('#e3f2fd', '#1565c0')}>
-            <TranslateIcon sx={{ fontSize: 19 }} />
-          </IconButton>
-          <IconButton sx={iconBtnSx('#fff8e1', '#ff8f00')}>
-            <NotificationsNoneIcon sx={{ fontSize: 19 }} />
-          </IconButton>
-          <IconButton sx={iconBtnSx('#e3f2fd', '#1565c0')}>
-            <FullscreenIcon sx={{ fontSize: 19 }} />
-          </IconButton>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Avatar
+            sx={{
+              width: 36,
+              height: 36,
+              bgcolor: 'orange.dark',
+              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+              cursor: 'pointer',
+              '&:hover': { transform: 'scale(1.08)', boxShadow: '0 4px 12px rgba(0,0,0,0.15)' },
+            }}
+          >
+            P
+          </Avatar>
         </Box>
 
       </Toolbar>
