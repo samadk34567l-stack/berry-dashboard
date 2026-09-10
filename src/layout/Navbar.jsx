@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppBar, Toolbar, IconButton, Box, Avatar, Paper, InputBase } from '@mui/material'
+import { AppBar, Toolbar, IconButton, Box, Paper, InputBase } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import SearchIcon from '@mui/icons-material/Search'
 import TuneIcon from '@mui/icons-material/Tune'
@@ -98,21 +98,6 @@ export default function Navbar({ onMenuClick, onToggleSidebar, desktopOpen }) {
         </IconButton>
 
         <Box sx={{ flexGrow: 1 }} />
-
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Avatar
-            sx={{
-              width: 36,
-              height: 36,
-              bgcolor: 'orange.dark',
-              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-              cursor: 'pointer',
-              '&:hover': { transform: 'scale(1.08)', boxShadow: '0 4px 12px rgba(0,0,0,0.15)' },
-            }}
-          >
-            P
-          </Avatar>
-        </Box>
 
       </Toolbar>
     </AppBar>
